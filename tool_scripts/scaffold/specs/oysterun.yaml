@@ -1,0 +1,101 @@
+# Oysterun ClickUp workspace spec.
+# Read by tool_scripts/scaffold/scaffold.py. Never uploaded to ClickUp.
+# Edit + re-run scaffold.py to reconcile (additive only, never destructive).
+
+space:
+  name: Oysterun
+  multiple_assignees: true
+  features:
+    tags: { enabled: true }
+    time_tracking: { enabled: true }
+    time_estimates: { enabled: true }
+    dependencies: { enabled: true }
+    priorities: { enabled: true }
+    checklists: { enabled: true }
+    custom_fields: { enabled: true }
+  statuses:
+    - { status: "todo",        type: open,   color: "#87909e", orderindex: 0 }
+    - { status: "in progress", type: custom, color: "#0091ff", orderindex: 1 }
+    - { status: "pending",     type: custom, color: "#f76808", orderindex: 2 }
+    - { status: "done",        type: closed, color: "#008844", orderindex: 3 }
+  custom_fields:
+    - { name: PR, type: url }
+
+folderless_lists:
+  - name: "Backend (Cloud)"
+  - name: "Host Service"
+  - name: "Web Client"
+  - name: "Phone App — Chat"
+  - name: "Phone App (iOS) — General"
+  - name: "Shared / Infra"
+  - name: "Cross-Cutting"
+
+tags:
+  # Backend modules
+  - { name: auth }
+  - { name: devices }
+  - { name: agents }
+  - { name: users }
+  - { name: onboarding }
+  - { name: email }
+  - { name: db }
+  - { name: crypto }
+  # Host Service modules
+  - { name: session }
+  - { name: providers }
+  - { name: transcript }
+  - { name: uploads }
+  - { name: push-host }
+  - { name: folder-browser-host }
+  - { name: workspace-policy }
+  - { name: ngrok }
+  - { name: host-auth }
+  - { name: link-annotations }
+  # Web Client modules
+  - { name: dashboard }
+  - { name: chat-ui-web }
+  - { name: folder-browser-web }
+  # Phone App — Chat modules
+  - { name: chat-ui }
+  - { name: composer }
+  - { name: streaming }
+  - { name: history }
+  - { name: chat-push }
+  - { name: attachments }
+  - { name: session-wiring }
+  # Phone App — General modules
+  - { name: shell }
+  - { name: auth-flow }
+  - { name: explorer }
+  - { name: settings }
+  - { name: background }
+  - { name: telegram-extract }
+  # Shared / Cross-Cutting
+  - { name: stack-config }
+  - { name: launch-agents }
+  - { name: docs }
+  - { name: tests }
+  - { name: cloud-host }
+  - { name: provider-abstraction }
+  - { name: release }
+  # Type
+  - { name: bug,         color: "#e53935" }
+  - { name: feature,     color: "#43a047" }
+  - { name: enhancement, color: "#66bb6a" }
+  - { name: tech-debt,   color: "#fb8c00" }
+  - { name: refactor,    color: "#fdd835" }
+  - { name: spike,       color: "#00897b" }
+  - { name: incident,    color: "#b71c1c" }
+  # Quality
+  - { name: security,    color: "#d81b60" }
+  - { name: performance }
+  - { name: a11y }
+  - { name: i18n }
+  - { name: observability }
+  - { name: migration }
+  # Workflow
+  - { name: needs-design }
+  - { name: needs-repro }
+  - { name: waiting-on-upstream }
+  - { name: blocked-external }
+  # Priority lives in ClickUp's native priority field, NOT here (-p0..-p3 flag on /add_task)

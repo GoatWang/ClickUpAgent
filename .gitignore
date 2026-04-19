@@ -1,0 +1,10 @@
+config.json
+data/
+output/
+uploads/
+__pycache__/
+*.pyc
+.venv/
+.env
+.DS_Store
+config.json

@@ -1,0 +1,13 @@
+{
+  "CLICKUP_API_TOKEN": "pk_XXXXX_XXXXXXXXXXXXXXXXXXXXXXXX",
+  "clickup": {
+    "team_id": "90182630024",
+    "default_space_name": "Oysterun",
+    "custom_task_ids_enabled": false,
+    "id_map_path": "data/oysterun_ids.json"
+  },
+  "telegram": {
+    "bot_token": "REPLACE",
+    "allowed_chat_ids": []
+  }
+}
