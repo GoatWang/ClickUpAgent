@@ -12,7 +12,7 @@ ClickUp agent driven through [claude-telegram-bot (ctb)](../claude-telegram-bot)
 2. **Direct dict access** — `dict["key"]` by default; `.get()` only for truly optional fields.
 3. **Never delete without explicit confirmation** — destructive operations require a confirm card and `y`.
 4. **No over-engineering** — only build what's needed now.
-5. **Every mutation is confirmed** — even on exact-id match, show a one-line confirm card before mutating. See §Fuzzy resolve + confirm.
+5. **Every mutation is confirmed** — show a one-line confirm card before mutating. See §Fuzzy resolve + confirm. Exception: `/done <exact-id>` applies immediately (the id is already an unambiguous target).
 
 ## 語言慣例
 

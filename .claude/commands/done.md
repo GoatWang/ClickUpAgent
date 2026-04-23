@@ -8,12 +8,13 @@ On `/done <target> [--pr URL]`:
 `uv run python -m tool_scripts.resolve.fuzzy_target "<target>"`
 
 Handle the `kind`:
-- `exact` or `single-fuzzy` → show confirm card with the single candidate
+- `exact` → **skip confirm** and apply immediately (user already gave an unambiguous id). Jump to Step 3.
+- `single-fuzzy` → show confirm card with the single candidate
 - `multi` → list candidates numbered, user replies with index
 - `typo` → "你是指這個嗎? …" + top matches, user confirms
 - `none` → abort with "找不到符合的任務"
 
-### Step 2 — confirm
+### Step 2 — confirm (skipped when `kind == exact`)
 
 ```
 🔍 Found: "<name>"  (<list>, <current status>)
